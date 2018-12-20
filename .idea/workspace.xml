@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e759b980-f794-4067-b44e-38f75a0d1010" name="默认的" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/Tool-先造轮子/2.论文清洗/2.py" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/Tool-先造轮子/2.论文清洗/washing_data.py" afterPath="$PROJECT_DIR$/Tool-先造轮子/2.论文清洗/washing_data.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,7 +13,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Science_Research_Evaluation_by_Machine_Learning$2.coverage" NAME="2 Coverage Results" MODIFIED="1545207593130" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tool-先造轮子/2.论文清洗" />
-    <SUITE FILE_PATH="coverage/Science_Research_Evaluation_by_Machine_Learning$washing_data.coverage" NAME="washing_data Coverage Results" MODIFIED="1545280442634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tool-先造轮子/2.论文清洗" />
+    <SUITE FILE_PATH="coverage/Science_Research_Evaluation_by_Machine_Learning$washing_data.coverage" NAME="washing_data Coverage Results" MODIFIED="1545306605669" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tool-先造轮子/2.论文清洗" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -32,8 +30,8 @@
       <file leaf-file-name="washing_data.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Tool-先造轮子/2.论文清洗/washing_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+            <state relative-caret-position="167">
+              <caret line="244" column="20" lean-forward="false" selection-start-line="244" selection-start-column="20" selection-end-line="244" selection-end-column="20" />
               <folding>
                 <element signature="e#137#171#0" expanded="true" />
               </folding>
@@ -101,6 +99,9 @@
       <find>diode</find>
       <find>adhered</find>
       <find>adhere</find>
+      <find>it</find>
+      <find>“</find>
+      <find>fl ows</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -121,9 +122,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="398" />
-    <option name="y" value="251" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="888" />
     <option name="height" value="765" />
   </component>
@@ -280,17 +281,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="398" y="251" width="888" height="765" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="702" extended-state="6" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3982456" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="调试" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4385965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3823065" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3067633" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38070175" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19213313" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -322,7 +322,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="18" />
+      <option name="time" value="20" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -510,10 +510,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://E:/machine learning/Anaconda3/Lib/site-packages/nltk/probability.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-19614">
+          <caret line="91" column="8" lean-forward="false" selection-start-line="91" selection-start-column="8" selection-end-line="91" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Tool-先造轮子/2.论文清洗/washing_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        <state relative-caret-position="167">
+          <caret line="244" column="20" lean-forward="false" selection-start-line="244" selection-start-column="20" selection-end-line="244" selection-end-column="20" />
           <folding>
             <element signature="e#137#171#0" expanded="true" />
           </folding>

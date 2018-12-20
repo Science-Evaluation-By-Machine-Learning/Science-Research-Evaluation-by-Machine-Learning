@@ -27,11 +27,11 @@ def readPDF(pdfFile):
 
 #Load the local PDF Document
 #pdfFile = open("16_AM_02.pdf",'rb')
-pdfFile = open("Test thesis.pdf",'rb')
+pdfFile = open("Test thesis_2.pdf",'rb')
 #Load the online PDF Document
 #pdfFile = urlopen("http://www.nanoscience.gatech.edu/paper/2016/16_AM_02.pdf")
 outputString = readPDF(pdfFile)
-#print(outputString)
+print(outputString)
 print(type(outputString))
 print(len(outputString))
 print('##########################################')
@@ -43,15 +43,58 @@ import nltk
 # 大小写转换
 outputString = outputString.lower() #小写转化
 # outputString = outputString.upper() #大写转化
-#print(outputString)
+print(outputString)
 
-# 文本替换，拆分连词
+# 文本替换，拆分连词，
+# PS: 这部分可以自己扩展
+  #文本替换，定义函数和类
+import re
+replacement_patterns = [
+    (r'won\'t','will not'),
+    (r'it\'s','it is'),
+    (r'can\'t','can not'),
+    (r'i\'m','i am'),
+    (r'isn\'t','is not'),
+    (r'(\w+)\'ll','g<1> will'),
+    (r'(\w+)n\'t','\g<1> not'),
+    (r'(\w+)\'ve','\g<1> have'),
+    (r'(\w+)\'s','\g<1> is'),
+    (r'(\w+)\'re','\g<1> are'),
+    (r'(\w+)\'d','\g<1> would'),
+    # 以下为防止pdfminer 将英文标点符号转化成中文标点符号异常特殊设定
+    (r'won\ ’t','will not'),
+    (r'it\ ’s','it is'),
+    (r'can\ ’t','can not'),
+    (r'i\ ’m','i am'),
+    (r'isn\ ’t','is not'),
+    (r'(\w+)\ ’ll','g<1> will'),
+    (r'(\w+)n\ ’t','\g<1> not'),
+    (r'(\w+)\ ’ve','\g<1> have'),
+    (r'(\w+)\ ’s','\g<1> is'),
+    (r'(\w+)\ ’re','\g<1> are'),
+    (r'(\w+)\ ’d','\g<1> would'),
+    (r'，',','), #将中文符号替换为英文符号
+    (r'。','.'),
+    (r'“','"'),
+    (r'”','"'),
+    (r'-',' '),
+    (r'f igure','figure'), #pdfminer 转化的异常单词替换
 
-
-
-
-
-
+]
+class RegexpReplacer(object):  #没太看懂，仔细看看
+    def __init__(self,patterns = replacement_patterns):
+        self.patterns = [(re.compile(regex),repl) for (regex,repl) in patterns]
+    def replace(self,text):
+        s = text
+        for (pattern, repl) in self.patterns:
+            (s,count) = re.subn(pattern,repl,s)
+        return s
+   # 替换操作
+replacer = RegexpReplacer()
+outputString = replacer.replace(outputString)
+print(outputString)
+   #同义词替换
+   #*******（待后续更新这部分）
 
 # 语句分离器
 sent_tokens = nltk.sent_tokenize(outputString)
@@ -172,9 +215,52 @@ for sent in word_tokens:
     cleanwordlist.append(new_sent)
 print("&&&&&&&&&&&&&&&&&&&&&")
 print(cleanwordlist)
+word_tokens = cleanwordlist
 
 #罕见词移除
 
 # 拼写纠错
 
 # 文本清理
+
+#列表转化为字符串
+   #先转化为标准列表
+word_tokens_list = []
+for sent in word_tokens:
+    for word in sent:
+        word_tokens_list.append(word)
+   #再由列表转化为字符串
+word_tokens_str = " ".join(word_tokens_list)
+print(word_tokens_str)
+
+# 统计词频
+import numpy as np
+from nltk.probability import FreqDist
+freq_dist = FreqDist(word_tokens_list)
+print(freq_dist)
+freq_list = []
+num_words = len(freq_dist.values())
+print(num_words)
+for i in range(num_words):
+    freq_list.append([list(freq_dist.keys())[i],list(freq_dist.values())[i]])
+freqArr = np.array(freq_list)
+print(freqArr)
+'''
+from nltk.probability import FreqDist
+import matplotlib
+import matplotlib.pyplot as plt
+matplotlib.use('TkAgg')
+for sent in word_tokens:
+    for word in sent:
+        fd = FreqDist().inc(word)
+ranks = []
+freqs = []
+for rank,word in enumerate(FreqDist()):
+    ranks.append(rank+1)
+    freqs.append(FreqDist()[word])
+plt.loglog(ranks,freqs)
+plt.xlabel('frequency(f)',fontsize=14,fontweight = 'bold')
+plt.ylabel('rank(r)',fontsize=14,fontweight = 'bold')
+plt.grid(True)
+plt.show()
+'''
